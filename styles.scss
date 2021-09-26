@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+$primary-color:  #ebf4fb;
+$secondary-color: #000058;
+$primary-font: 'Nunito', monospace, san-serif;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header, main {
+  padding: 25px 1em;
+  text-align: center;
+  font-family: $primary-font;
+}
+
+header{
+  line-height: 1.9em;
+  font-size: 3vw;
+  color: $secondary-color;
+  background-color: $primary-color;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.score-board {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5vw auto;
+  border: 2px solid $secondary-color;
+  border-radius: 5px;
+  padding: 2vh 3vw;
+  font-size: 6vw;
+  position: relative;
+  width: 50%;
+
+  .badge {
+    color: $primary-color;
+    // width: 55px;
+    border-radius: 5px;
+    background: $secondary-color;
+  }
+
+  #user-label {
+    position: absolute;
+    top: 19px;
+    left: -27px;
+    padding: 0 5px;
+    font-size: 4.5vw
+  }
+
+  #robot-label {
+    position: absolute;
+    top: 19px;
+    right: -27px;
+    padding: 0 5px;
+    font-size: 4.5vw
+  }
+}
+
+.choice-display {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px;
+
+  .player-icon {
+    font-size: 6vw;
+  }
+
+  .player-choice {
+    font-size: 4vw;
+  }
+}
+
+.result {
+  padding: 20px;
+  font-weight: 600;
+  font-size: 5vw;
+}
+
+.choices {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+  margin-top: 20px;
+
+  img {
+    width: 20vw;
+    padding: 5vw;
+  }
+
+  .choice:hover {
+    background: $secondary-color;
+  }
+}
+
+.choice {
+  border: 2px solid $secondary-color;
+  border-radius: 40%;
+  transition: all 0.3s ease-out;
+}
+
+.action-text {
+  font-size: 4vw;
+}
+
+.green-glow {
+  border: 2px solid #48ff48;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+.red-glow {
+  border: 2px solid #ff5c5c;
+  box-shadow: 0 0 10px #ff0005;
+}
+
+.gray-glow {
+  border: 2px solid rgb(128, 128, 128);
+  box-shadow: 0 0 10px #687175;
+}
+

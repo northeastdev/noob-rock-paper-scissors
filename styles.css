@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header, main {
+  padding: 25px 1em;
+  text-align: center;
+  font-family: "Nunito", monospace, san-serif;
+}
+
+header {
+  line-height: 1.9em;
+  font-size: 3vw;
+  color: #000058;
+  background-color: #ebf4fb;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+}
+
+.score-board {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5vw auto;
+  border: 2px solid #000058;
+  border-radius: 5px;
+  padding: 2vh 3vw;
+  font-size: 6vw;
+  position: relative;
+  width: 50%;
+}
+
+.score-board .badge {
+  color: #ebf4fb;
+  border-radius: 5px;
+  background: #000058;
+}
+
+.score-board #user-label {
+  position: absolute;
+  top: 19px;
+  left: -27px;
+  padding: 0 5px;
+  font-size: 4.5vw;
+}
+
+.score-board #robot-label {
+  position: absolute;
+  top: 19px;
+  right: -27px;
+  padding: 0 5px;
+  font-size: 4.5vw;
+}
+
+.choice-display {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  grid-gap: 10px;
+}
+
+.choice-display .player-icon {
+  font-size: 6vw;
+}
+
+.choice-display .player-choice {
+  font-size: 4vw;
+}
+
+.result {
+  padding: 20px;
+  font-weight: 600;
+  font-size: 5vw;
+}
+
+.choices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5vw;
+  margin-top: 20px;
+}
+
+.choices img {
+  width: 20vw;
+  padding: 5vw;
+}
+
+.choices .choice:hover {
+  background: #000058;
+}
+
+.choice {
+  border: 2px solid #000058;
+  border-radius: 40%;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.action-text {
+  font-size: 4vw;
+}
+
+.green-glow {
+  border: 2px solid #48ff48;
+  -webkit-box-shadow: 0 0 10px #00ff00;
+          box-shadow: 0 0 10px #00ff00;
+}
+
+.red-glow {
+  border: 2px solid #ff5c5c;
+  -webkit-box-shadow: 0 0 10px #ff0005;
+          box-shadow: 0 0 10px #ff0005;
+}
+
+.gray-glow {
+  border: 2px solid gray;
+  -webkit-box-shadow: 0 0 10px #687175;
+          box-shadow: 0 0 10px #687175;
+}
+/*# sourceMappingURL=styles.css.map */
