@@ -1,9 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
-
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  background: #cfeeff;
 }
 
 header, main {
@@ -14,7 +18,7 @@ header, main {
 
 header {
   line-height: 1.9em;
-  font-size: 3vw;
+  font-size: clamp(8px, 3vw, 18px);
   color: #000058;
   background-color: #ebf4fb;
 }
@@ -40,13 +44,19 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 5vw auto;
+  margin: 3vw auto;
   border: 2px solid #000058;
   border-radius: 5px;
-  padding: 2vh 3vw;
-  font-size: 6vw;
+  padding: 2vh 1vw;
+  font-size: 30px;
   position: relative;
-  width: 50%;
+  width: 35%;
+  max-width: 200px;
+  min-width: 75px;
+}
+
+.score-board .score-div {
+  color: #000058;
 }
 
 .score-board .badge {
@@ -57,18 +67,18 @@ main {
 
 .score-board #user-label {
   position: absolute;
-  top: 19px;
-  left: -27px;
+  top: 22px;
+  left: -51px;
   padding: 0 5px;
-  font-size: 4.5vw;
+  font-size: 1.2rem;
 }
 
 .score-board #robot-label {
   position: absolute;
-  top: 19px;
-  right: -27px;
+  top: 22px;
+  right: -62px;
   padding: 0 5px;
-  font-size: 4.5vw;
+  font-size: 1.2rem;
 }
 
 .choice-display {
@@ -76,21 +86,25 @@ main {
   display: grid;
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
-  grid-gap: 10px;
+  grid-gap: 10px 0;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .choice-display .player-icon {
-  font-size: 6vw;
+  font-size: 2.2rem;
 }
 
 .choice-display .player-choice {
-  font-size: 4vw;
+  font-size: 1.2rem;
+  color: #000058;
 }
 
 .result {
   padding: 20px;
   font-weight: 600;
-  font-size: 5vw;
+  font-size: clamp(1rem, 4vw, 2rem);
+  color: #000058;
 }
 
 .choices {
@@ -103,13 +117,23 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 5vw;
+  gap: 2vw;
   margin-top: 20px;
 }
 
 .choices img {
-  width: 20vw;
-  padding: 5vw;
+  width: 10vw;
+  max-width: 5rem;
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .choices .choice:hover {
@@ -118,13 +142,15 @@ main {
 
 .choice {
   border: 2px solid #000058;
-  border-radius: 40%;
+  border-radius: 50%;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
 .action-text {
-  font-size: 4vw;
+  font-size: clamp(0.8rem, 4vw, 2rem);
+  margin-top: 5vw;
+  color: #000058;
 }
 
 .green-glow {
